@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script>
+        //定义模块 myApp
+        var app=angular.module('myApp',[]);
+        //定义控制器
+        app.controller('myController',function ($scope) {
+            $scope.add=function (x,y) {
+                $scope.z=parseInt(x)+parseInt(y);
+            }
+        });
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+    x:<input ng-model="x">
+    y:<input ng-model="y">
+    <!--ng-click鼠标单击事件-->
+    <button ng-click="add（x,y)">运算</button>
+    结果:{{z}}
+</body>
+</html>

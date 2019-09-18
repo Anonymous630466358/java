@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body ng-app ng-init="myname='高煜程'">
+<!--ng-init指令 只要页面一加载 首先执行ng-init的操作
+        $scope是angularjs内置对象 有请求的数据和相应的数据 还有方法
+-->
+请输入您的姓名：<input ng-model="myname"/><br>
+{{myname}},您好
+</body>
+</html>

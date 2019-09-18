@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script>
+        var app=angular.module('myApp',[]);//定义了一个myApp的模块
+        //定义控制器$scope请求的响应数据 方法
+        app.controller('myController',function ($scope) {
+            $scope.add=function () {
+                return parseInt($scope.x)+parseInt($scope.y);
+            }
+        });
+        //1、var app=angular.module('myApp',[]);定义了一个myApp的模块 定义后在body
+        //标签上声明使用模块的名称
+        //2、app.controller('myController',function($scope))在模块中声明
+        //控制器 定义好后在body上声明使用控制器
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+x:<input ng-model="x">
+y:<input ng-model="y">
+运算结果:{{add()}}
+</body>
+</html>

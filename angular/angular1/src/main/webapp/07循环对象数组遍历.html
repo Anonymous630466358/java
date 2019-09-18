@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script>
+        var app=angular.module('myApp',[]);
+        //声明控制器
+        app.controller('myController',function ($scope) {
+            $scope.list=[
+                {name:'gyc1',salary:10000,sui:100},
+                {name:'gyc2',salary:10000,sui:100},
+                {name:'gyc3',salary:10000,sui:100}
+            ];
+        });
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+    <table>
+        <tr>
+            <td>姓名</td>
+            <td>工资</td>
+            <td>交税</td>
+        </tr>
+        <tr ng-repeat="entity in list">
+            <td>{{entity.name}}</td>
+            <td>{{entity.salary}}</td>
+            <td>{{entity.sui}}</td>
+        </tr>
+    </table>
+</body>
+</html>

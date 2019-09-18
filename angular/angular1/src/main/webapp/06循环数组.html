@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script>
+        var app=angular.module('myApp',[]);
+        //定义控制器
+        app.controller('myController',function ($scope) {
+            $scope.list=[666,111,999,888];//声明数组list
+        });
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+    <table>
+        <!--ng-repeat="entity in list" 循环遍历 no-repeat是循环指令-->
+        <tr ng-repeat="entity in list">
+            <td>{{entity}}</td>
+        </tr>
+    </table>
+</body>
+</html>

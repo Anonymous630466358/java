@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/angular.min.js"></script>
+	</head>
+	<body ng-app>
+		<!--ng-model指令是给input起名 后台如果接收表单数据 可以根据ng-model中的属性名获取值
+				页面也可以通过这个属性值获取 本质数据放到当前页面的$scope中保存
+		-->
+	请输入您的姓名:<input ng-model="myname"/><br/>
+	{{myname}},你好
+	</body>
+</html>
